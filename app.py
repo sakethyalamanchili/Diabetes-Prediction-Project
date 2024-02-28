@@ -14,7 +14,7 @@ from catboost import CatBoostClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 
 # Load the dataset
-df = pd.read_csv("diabetes.csv")
+df = pd.read_csv("C:/Users/laksh/Documents/Saketh-Machine_learning/Diabetes-Prediction-Web-App/diabetes.csv")
 
 # Handle zero values in features by replacing them with mean values
 zero_features = ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']
@@ -51,16 +51,20 @@ def diabetes_prediction(input_data):
 def main():
     # Setting page title and favicon
     st.set_page_config(page_title="Diabetes Prediction Web App", page_icon=":hospital:")
-   
+    
+    # Adding name in bold and increased font size next to the title
+    st.title("Diabetes Prediction Web App")
+    st.markdown("**By Saketh Yalamanchili**")
+    
+    # Displaying GitHub and LinkedIn links in the same column
+    st.write("[GitHub](https://github.com/sakethyalamanchili)   [LinkedIn](https://www.linkedin.com/in/saketh05/)")
+    
     # Preload the image
     image = Image.open("diabetes_icon.webp")
    
     # Display the image
     st.image(image, use_column_width=True)
    
-    # Giving a title
-    st.title("Diabetes Prediction Web App.")
-    
     # Displaying basic information next to input boxes
     st.markdown("Please enter the following information:")
     
