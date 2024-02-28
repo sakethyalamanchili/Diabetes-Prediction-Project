@@ -14,7 +14,7 @@ from catboost import CatBoostClassifier
 from sklearn.model_selection import train_test_split, GridSearchCV
 
 # Load the dataset
-df = pd.read_csv("C:/Users/laksh/Documents/Saketh-Machine_learning/Diabetes-Prediction-Web-App/diabetes.csv")
+df = pd.read_csv("diabetes.csv")
 
 # Handle zero values in features by replacing them with mean values
 zero_features = ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']
